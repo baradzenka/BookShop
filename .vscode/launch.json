@@ -1,0 +1,25 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"request": "launch",
+
+			"name": "Debug in Chrome",
+			"type": "chrome",
+		//		"url": "http://localhost:3000/dist/index.html",
+		//		"url": "http://127.0.0.1:3000/dist/index.html",
+		// or
+				"file": "${workspaceFolder}/dist/index.html",
+			"webRoot": "${workspaceFolder}"
+
+	//		"name": "Launch Program",
+	//		"type": "node",
+	//		"program": "${workspaceFolder}/index.ts",
+	//		"preLaunchTask": "tsc: build - tsconfig.json",
+	//		"outFiles": ["${workspaceFolder}/dist/**/*.js"]
+		}
+	]
+}  

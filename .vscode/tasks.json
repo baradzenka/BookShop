@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build-watch",
+			"presentation": {"reveal": "silent"},
+			"isBackground": true,
+			"label": ">>> Watch the build"
+		},
+		{
+			"type": "shell",
+			"command": "cmd",
+			"isBackground": true,
+			"problemMatcher": [],
+			"label": ">>> New Terminal"
+		},
+		{
+			"dependsOn": [">>> Watch the build", ">>> New Terminal"],
+			"runOptions": {"runOn": "folderOpen"},
+			"problemMatcher": [],			
+			"label": ">>> AutoStart Watching",
+		}
+	]
+}

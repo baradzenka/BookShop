@@ -1,0 +1,141 @@
+
+
+.loading-indicator-a {
+	display: block;
+
+	width: 108px;
+	height: 7px;
+
+	position: relative;
+
+	> div {
+		width: 9px;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+
+		animation-name: loading-indicator-a;
+		animation-duration: 1.2s;
+		animation-iteration-count: infinite;
+		animation-direction: normal;
+		transform: scale(0);
+	}
+
+	.b1 {
+		left: 0;
+		animation-delay: 0.0s;
+	}
+	.b2 {
+		left: 13px;
+		animation-delay: 0.13s;
+	}
+	.b3 {
+		left: 27px;
+		animation-delay: 0.26s;
+	}
+	.b4 {
+		left: 40px;
+		animation-delay: 0.39s;
+	}
+	.b5 {
+		left: 54px;
+		animation-delay: 0.52s;
+	}
+	.b6 {
+		left: 67px;
+		animation-delay: 0.65s;
+	}
+	.b7 {
+		left: 81px;
+		animation-delay: 0.78s;
+	}
+	.b8 {
+		left: 94px;
+		animation-delay: 0.91s;
+	}
+
+	@keyframes loading-indicator-a {
+		0% {
+			transform: scale(1);
+		}
+		100% {
+			transform: scale(.3);
+			background-color: transparent;
+		}
+	}
+
+	&[hidden] {
+		display: block;
+		opacity: 0;
+
+		> div {
+			animation: none;
+		}
+	}
+}
+
+
+.loading-indicator-b {
+	display: block;
+
+	width: 55px;
+	height: 3px;
+
+	position: relative;
+
+	> div {
+		width: 12px;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+
+		animation-name: loading-indicator-b;
+		animation-duration: 0.50s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate-reverse;
+		transform: scale(0);
+	}
+
+	.b1 {
+		left: 0;
+		animation-delay: 0.0s;
+	}
+	.b2 {
+		left: 11px;
+		animation-delay: 0.13s;
+	}
+	.b3 {
+		left: 22px;
+		animation-delay: 0.26s;
+	}
+	.b4 {
+		left: 33px;
+		animation-delay: 0.39s;
+	}
+	.b5 {
+		left: 44px;
+		animation-delay: 0.52s;
+	}
+
+	@keyframes loading-indicator-b {
+		0% {
+			transform: scale(1);
+		}
+		100% {
+			transform: scale(.3);
+			background-color: transparent;
+		}
+	}
+
+	&[hidden] {
+		display: block;
+		opacity: 0;
+
+		> div {
+			animation: none;
+		}
+	}
+}
+
