@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+	<link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+	<link href="./index.css" rel="stylesheet">
+	<title>Book Shop</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__content">
+			<a class="header__logo" href="#">Bookshop</a>
+			<nav class="header__menu-nav">
+				<a class="header__menu-nav-item menu-nav-item_active" href="#">books</a>
+				<a class="header__menu-nav-item" href="#">audiobooks</a>
+				<a class="header__menu-nav-item" href="#">Stationery & gifts</a>
+				<a class="header__menu-nav-item" href="#">blog</a>
+			</nav>
+			<nav class="header__menu-action">
+				<a class="header__menu-action-item menu-action-item_login" href="#"></a>
+				<a class="header__menu-action-item menu-action-item_search" href="#"></a>
+				<a class="header__menu-action-item menu-action-item_cart" href="#">
+					<span class="menu-action-item__counter" hidden></span>
+				</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="slider">
+			<div class="slider__banners">
+				<a class="slider__banner slider__banner_top" href="#">Change<br> old book<br> on new</a>
+				<a class="slider__banner slider__banner_bottom" href="#">top<br> 100<br> books<br> 2022</a>
+			</div>
+
+			<div class="slider__screen" hidden></div>
+			<div class="slider__preload-slides loading-indicator-b"></div>
+			<div class="slider__ctrl" hidden></div>
+		</div>
+
+		<div class="book-gallery">
+			<div class="book-categories"></div>
+			<div class="book-ctrl">
+				<div class="book-list"></div>
+				<div class="banner-error" hidden></div>
+				<div class="load-more-indicator loading-indicator-a" hidden></div>
+				<button type="button" class="button book-ctrl__load-more-btn">Load more</button>
+			</div>
+		</div>
+	</main>
+
+
+	<script src="./index.js"></script>
+
+</body>
+
+</html>
