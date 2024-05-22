@@ -50,7 +50,7 @@ function PrepareCategoriesLayout(bookCategories: string[], startItem: number): v
 			const content: string = MakeLoadingIndicatorBodyB("#756ad3");
 			categoryItem.innerHTML = c + `<span class="book-categories__loading loading-indicator-b" ${!active ? "hidden" : ""}>` +
 				`${content}</span>`;
-			categoryItem.onclick = e => OnSelectCategory((e.target as Element).textContent!);
+			categoryItem.onclick = e => OnSelectCategory(e.target as Element);
 		}
 	);
 }
@@ -64,11 +64,14 @@ function PrepareLoadMoreButtonLayout(): void
 
 
 
-function OnSelectCategory(categoryName: string): void
+function OnSelectCategory(categoryElem: Element): void
 {
-	HighlightCategory(categoryName);
-	g_preloadImages.Abort();
-	LoadBookGalleryChunk(true);   // with clear the book list.
+	if(!categoryElem.hasAttribute("active"))
+	{
+		HighlightCategory(categoryElem.textContent!);
+		g_preloadImages.Abort();
+		LoadBookGalleryChunk(true);   // with clear the book list.
+	}
 }
 
 function HighlightCategory(categoryName: string): void
