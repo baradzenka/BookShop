@@ -23,7 +23,7 @@ const bookCategories: string[] = ["Architecture", "Art & Fashion", "Biography",
 	"Health & Wellbeing", "History & Politics", "Humor", "Poetry", "Psychology",
 	"Science", "Technology", "Travel & Maps"];
 
-InitBookGallery(bookCategories, "AIzaSyAHbnThJUXRj4p3BsGqEj6wfew1hIuREhs",
+InitBookGallery(bookCategories, "AIzaSyBXrqz6SOovQ_1QbKaMzQysQoghyuA90Fw",
 	0/*initial category index*/, 6/*number of books at once*/,
 	() => UpdateBookCounter());
 LoadBookGalleryChunk();
